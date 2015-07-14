@@ -26,25 +26,16 @@
                         <constraint firstAttribute="width" constant="50" id="pHB-8S-Yhd"/>
                     </constraints>
                 </view>
-                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DiS-J8-3mo">
-                    <rect key="frame" x="279" y="248" width="42" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <nil key="highlightedColor"/>
-                </label>
             </subviews>
             <constraints>
                 <constraint firstAttribute="centerY" secondItem="P3G-WT-8oK" secondAttribute="centerY" id="1Ar-AM-LUc"/>
                 <constraint firstAttribute="centerX" secondItem="P3G-WT-8oK" secondAttribute="centerX" id="3fw-yd-PPd"/>
                 <constraint firstItem="Rhh-R0-Pvb" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="9wE-F8-idw"/>
                 <constraint firstItem="Rhh-R0-Pvb" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="QVZ-YJ-Uhd"/>
-                <constraint firstAttribute="centerX" secondItem="DiS-J8-3mo" secondAttribute="centerX" id="SLw-KD-7na"/>
                 <constraint firstAttribute="bottom" secondItem="Rhh-R0-Pvb" secondAttribute="bottom" id="UXs-6K-ULb"/>
                 <constraint firstAttribute="trailing" secondItem="Rhh-R0-Pvb" secondAttribute="trailing" id="ugf-3E-Lcw"/>
-                <constraint firstAttribute="centerY" secondItem="DiS-J8-3mo" secondAttribute="centerY" constant="41.5" id="xgz-jm-bkV"/>
             </constraints>
             <connections>
-                <outlet property="progressLabel" destination="DiS-J8-3mo" id="gzD-El-kvL"/>
                 <outlet property="progressView" destination="P3G-WT-8oK" id="nvt-jF-Qem"/>
                 <outlet property="scrollView" destination="Rhh-R0-Pvb" id="gxd-vl-MH6"/>
             </connections>

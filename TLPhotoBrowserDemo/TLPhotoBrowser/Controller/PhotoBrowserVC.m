@@ -11,6 +11,7 @@
 #import "UIView+Extension.h"
 #import "PBScrollView.h"
 #import "UIImage+ImageEffects.h"
+#import <SVProgressHUD.h>
 
 @interface PhotoBrowserVC ()<UIScrollViewDelegate>
 /* IBOutLet */
@@ -436,6 +437,19 @@ bool hidden = YES;
     
     [[UIApplication sharedApplication] setStatusBarStyle:_statusBarStyle animated:YES];
 }
+
+- (IBAction)saveBtnClicked:(id)sender {
+    [SVProgressHUD showWithStatus:@"保存中"];
+    [self.currentItemView savePhotoToAlbum:^{
+        [SVProgressHUD showSuccessWithStatus:@"保存成功"];
+    } failBlock:^(NSError *error) {
+        [SVProgressHUD showErrorWithStatus:@"保存失败"];
+        NSLog(@"%@", error);
+    }];
+}
+
+
+
 
 - (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration{
     CGFloat widthEachPage = [UIScreen mainScreen].bounds.size.width;

@@ -209,4 +209,23 @@
     }];
 }
 
+
+- (void)savePhotoToAlbum:(SaveCompleteBlock)completeBlock failBlock:(SaveFailBlock)failBlock{
+    UIImageWriteToSavedPhotosAlbum(self.photoImageView.image, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
+    self.saveCompleteBlock = completeBlock;
+    self.saveFailBlock = failBlock;
+}
+
+- (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo{
+    if (!error) {
+        if (self.saveCompleteBlock) {
+            self.saveCompleteBlock();
+        }
+    }else{
+        if (self.saveFailBlock) {
+            self.saveFailBlock(error);
+        }
+    }
+}
+
 @end

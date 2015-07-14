@@ -64,6 +64,9 @@
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <state key="disabled" image="preview_save_icon_disable.png"/>
+                            <connections>
+                                <action selector="saveBtnClicked:" destination="-1" eventType="touchUpInside" id="nax-Nd-e3y"/>
+                            </connections>
                         </button>
                     </subviews>
                     <constraints>

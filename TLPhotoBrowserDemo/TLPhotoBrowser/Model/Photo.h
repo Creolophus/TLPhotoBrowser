@@ -10,6 +10,7 @@
 #import <UIKit/UIKit.h>
 #import "PhotoBrowserType.h"
 
+
 @interface Photo : NSObject
 
 /** mid，保存图片缓存唯一标识，必须传 */
@@ -41,5 +42,10 @@
 /** 是否从源frame放大呈现 */
 @property (assign, nonatomic) BOOL isFromSourceFrame;
 
+
 + (NSString *)check:(NSArray *)photos type:(PhotoBrowserVCType)type;
+
+
+
+
 @end

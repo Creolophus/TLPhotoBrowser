@@ -12,6 +12,9 @@
 #import "PhotoBrowserType.h"
 
 typedef void(^PhotoItemViewSingleTapBlock)();
+typedef void(^SaveCompleteBlock)();
+typedef void(^SaveFailBlock)(NSError *error);
+
 
 @interface PhotoItemView : UIView
 
@@ -36,7 +39,15 @@ typedef void(^PhotoItemViewSingleTapBlock)();
 /* 单击回调block */
 @property (copy, nonatomic) PhotoItemViewSingleTapBlock photoItemViewSingleTapBlock;
 
+/* 保存图片Block */
+@property (copy, nonatomic) SaveCompleteBlock saveCompleteBlock;
+
+@property (copy, nonatomic) SaveFailBlock saveFailBlock;
+
 /* 缩小返回 */
 -(void)zoomDismiss:(void(^)())compeletionBlock;
+
+- (void)savePhotoToAlbum:(SaveCompleteBlock)completeBlock failBlock:(SaveFailBlock)failBlock;
+
 
 @end
