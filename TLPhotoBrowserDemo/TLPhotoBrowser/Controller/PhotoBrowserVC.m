@@ -454,9 +454,11 @@ bool hidden = YES;
 
 }
 
-//- (BOOL)shouldAutorotate{
-//    return NO;
-//}
+- (BOOL)shouldAutorotate{
+    return YES;
+}
+
+
 /*
 #pragma mark - Navigation
 

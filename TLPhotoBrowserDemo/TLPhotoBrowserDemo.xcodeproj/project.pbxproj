@@ -52,6 +52,7 @@
 		36B38B151B54979700CFE174 /* PhotoItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36B38AFB1B54979700CFE174 /* PhotoItemView.m */; };
 		36B38B161B54979700CFE174 /* PhotoItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36B38AFC1B54979700CFE174 /* PhotoItemView.xib */; };
 		36B38B171B54979700CFE174 /* PhotoProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36B38AFE1B54979700CFE174 /* PhotoProgressView.m */; };
+		36B38B1A1B54B26D00CFE174 /* UINavigationController+Rotate.m in Sources */ = {isa = PBXBuildFile; fileRef = 36B38B191B54B26D00CFE174 /* UINavigationController+Rotate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -128,6 +129,8 @@
 		36B38AFC1B54979700CFE174 /* PhotoItemView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoItemView.xib; sourceTree = "<group>"; };
 		36B38AFD1B54979700CFE174 /* PhotoProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoProgressView.h; sourceTree = "<group>"; };
 		36B38AFE1B54979700CFE174 /* PhotoProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoProgressView.m; sourceTree = "<group>"; };
+		36B38B181B54B26D00CFE174 /* UINavigationController+Rotate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+Rotate.h"; sourceTree = "<group>"; };
+		36B38B191B54B26D00CFE174 /* UINavigationController+Rotate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+Rotate.m"; sourceTree = "<group>"; };
 		4133041B9C091F9DFD0665CE /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		4F6119106FC3C9407DD4E706 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		BBFAF73213CD27BF8B61DA6A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -202,6 +205,8 @@
 			children = (
 				366993931B50B0140050E344 /* AppDelegate.h */,
 				366993941B50B0140050E344 /* AppDelegate.m */,
+				36B38B181B54B26D00CFE174 /* UINavigationController+Rotate.h */,
+				36B38B191B54B26D00CFE174 /* UINavigationController+Rotate.m */,
 				366993961B50B0140050E344 /* ViewController.h */,
 				366993971B50B0140050E344 /* ViewController.m */,
 				3642DD6A1B536F5F005CA499 /* PicCell.h */,
@@ -518,6 +523,7 @@
 				366993981B50B0140050E344 /* ViewController.m in Sources */,
 				3642DD761B53B0FF005CA499 /* ViewControllerForNews.m in Sources */,
 				36B38AFF1B54979700CFE174 /* UIImage+ImageEffects.m in Sources */,
+				36B38B1A1B54B26D00CFE174 /* UINavigationController+Rotate.m in Sources */,
 				366993951B50B0140050E344 /* AppDelegate.m in Sources */,
 				3642DD6D1B536F5F005CA499 /* PicCell.m in Sources */,
 				36B38B011B54979700CFE174 /* UIView+Extension.m in Sources */,
