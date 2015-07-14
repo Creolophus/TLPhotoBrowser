@@ -34,7 +34,7 @@ typedef void(^PhotoItemViewSingleTapBlock)();
 @property (nonatomic,assign) PhotoBrowserVCType browserType;
 
 /* 单击回调block */
-@property (strong, nonatomic) PhotoItemViewSingleTapBlock photoItemViewSingleTapBlock;
+@property (copy, nonatomic) PhotoItemViewSingleTapBlock photoItemViewSingleTapBlock;
 
 /* 缩小返回 */
 -(void)zoomDismiss:(void(^)())compeletionBlock;
