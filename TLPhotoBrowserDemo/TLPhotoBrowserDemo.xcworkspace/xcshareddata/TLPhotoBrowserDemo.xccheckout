@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>FD5C59B1-0D07-4C66-B7B5-6136D901F135</string>
+	<key>IDESourceControlProjectName</key>
+	<string>TLPhotoBrowserDemo</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>0DFDCB0B880E6A219B7F4CB4BED984EF9EE32F4A</key>
+		<string>https://github.com/Creolophus/TLPhotoBrowser.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>TLPhotoBrowserDemo/TLPhotoBrowserDemo.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>0DFDCB0B880E6A219B7F4CB4BED984EF9EE32F4A</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/Creolophus/TLPhotoBrowser.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>0DFDCB0B880E6A219B7F4CB4BED984EF9EE32F4A</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>0DFDCB0B880E6A219B7F4CB4BED984EF9EE32F4A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>TLPhotoBrowser</string>
+		</dict>
+	</array>
+</dict>
+</plist>
