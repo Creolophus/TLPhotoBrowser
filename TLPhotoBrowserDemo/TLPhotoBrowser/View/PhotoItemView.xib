@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PhotoItemView">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" maximumZoomScale="3" translatesAutoresizingMaskIntoConstraints="NO" id="Rhh-R0-Pvb">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="Y9s-Qy-T1g"/>
+                    </connections>
+                </scrollView>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P3G-WT-8oK" customClass="PhotoProgressView">
+                    <rect key="frame" x="275" y="275" width="50" height="50"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="P3G-WT-8oK" secondAttribute="height" multiplier="1:1" id="80V-od-ReF"/>
+                        <constraint firstAttribute="width" constant="50" id="pHB-8S-Yhd"/>
+                    </constraints>
+                </view>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DiS-J8-3mo">
+                    <rect key="frame" x="279" y="248" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="centerY" secondItem="P3G-WT-8oK" secondAttribute="centerY" id="1Ar-AM-LUc"/>
+                <constraint firstAttribute="centerX" secondItem="P3G-WT-8oK" secondAttribute="centerX" id="3fw-yd-PPd"/>
+                <constraint firstItem="Rhh-R0-Pvb" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="9wE-F8-idw"/>
+                <constraint firstItem="Rhh-R0-Pvb" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="QVZ-YJ-Uhd"/>
+                <constraint firstAttribute="centerX" secondItem="DiS-J8-3mo" secondAttribute="centerX" id="SLw-KD-7na"/>
+                <constraint firstAttribute="bottom" secondItem="Rhh-R0-Pvb" secondAttribute="bottom" id="UXs-6K-ULb"/>
+                <constraint firstAttribute="trailing" secondItem="Rhh-R0-Pvb" secondAttribute="trailing" id="ugf-3E-Lcw"/>
+                <constraint firstAttribute="centerY" secondItem="DiS-J8-3mo" secondAttribute="centerY" constant="41.5" id="xgz-jm-bkV"/>
+            </constraints>
+            <connections>
+                <outlet property="progressLabel" destination="DiS-J8-3mo" id="gzD-El-kvL"/>
+                <outlet property="progressView" destination="P3G-WT-8oK" id="nvt-jF-Qem"/>
+                <outlet property="scrollView" destination="Rhh-R0-Pvb" id="gxd-vl-MH6"/>
+            </connections>
+            <point key="canvasLocation" x="179" y="189"/>
+        </view>
+    </objects>
+</document>
