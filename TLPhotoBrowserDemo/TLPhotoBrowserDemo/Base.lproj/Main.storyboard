@@ -95,7 +95,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MXb-W6-Ryx">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="2320"/>
                                         <subviews>
-                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1.png" translatesAutoresizingMaskIntoConstraints="NO" id="pce-J3-zoA">
+                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="pce-J3-zoA">
                                                 <rect key="frame" x="200" y="30" width="200" height="125"/>
                                                 <gestureRecognizers/>
                                                 <constraints>
@@ -106,7 +106,7 @@
                                                     <outletCollection property="gestureRecognizers" destination="LRB-OU-IF1" appends="YES" id="0ZQ-dE-nev"/>
                                                 </connections>
                                             </imageView>
-                                            <imageView tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2.png" translatesAutoresizingMaskIntoConstraints="NO" id="kSl-KH-3YP">
+                                            <imageView tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="kSl-KH-3YP">
                                                 <rect key="frame" x="200" y="184" width="200" height="125"/>
                                                 <gestureRecognizers/>
                                                 <constraints>
@@ -117,7 +117,7 @@
                                                     <outletCollection property="gestureRecognizers" destination="SHY-Z8-s35" appends="YES" id="Yfc-xd-jrk"/>
                                                 </connections>
                                             </imageView>
-                                            <imageView tag="2" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3.png" translatesAutoresizingMaskIntoConstraints="NO" id="nFn-7r-OC0">
+                                            <imageView tag="2" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="nFn-7r-OC0">
                                                 <rect key="frame" x="200" y="335" width="200" height="125"/>
                                                 <gestureRecognizers/>
                                                 <constraints>
@@ -128,7 +128,7 @@
                                                     <outletCollection property="gestureRecognizers" destination="yy5-Qn-zwu" appends="YES" id="uaC-5D-L4Y"/>
                                                 </connections>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" tag="3" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="4.png" translatesAutoresizingMaskIntoConstraints="NO" id="aFH-lB-oQ6">
+                                            <imageView clipsSubviews="YES" tag="3" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="4.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="aFH-lB-oQ6">
                                                 <rect key="frame" x="200" y="490" width="200" height="1800"/>
                                                 <gestureRecognizers/>
                                                 <constraints>
@@ -227,9 +227,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="1.png" width="2880" height="1800"/>
-        <image name="2.png" width="2880" height="1800"/>
-        <image name="3.png" width="2880" height="1800"/>
-        <image name="4.png" width="2880" height="1800"/>
+        <image name="1.jpg" width="2880" height="1800"/>
+        <image name="2.jpg" width="2880" height="1800"/>
+        <image name="3.jpg" width="2880" height="1800"/>
+        <image name="4.jpg" width="2880" height="1800"/>
     </resources>
 </document>

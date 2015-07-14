@@ -164,10 +164,10 @@
     }
 
 //    Photo *photo = _photos[_index];
-    self.view.frame=[UIScreen mainScreen].bounds;
+    self.view.frame = [UIScreen mainScreen].bounds;
     [window addSubview:self.view];
-//    [_handleVC addChildViewController:self];
-//    [self didMoveToParentViewController:_handleVC];
+    [_handleVC addChildViewController:self];
+    [self didMoveToParentViewController:_handleVC];
     
     Photo *photo = _photos[_index];
 //    photo.sourceImageView.hidden = YES;
@@ -275,6 +275,9 @@
         Photo *photo = _photos[i];
         PhotoItemView *photoItemView = [_scrollView photoItemViewForPhoto:photo];
         CGRect itemViewFrame = [_scrollView frameForPhotoItemViewAtPage:i];
+        if (photoItemView) {
+            photoItemView.frame = itemViewFrame;
+        }
         if ([_scrollView shouldRenderPhotoItemView:itemViewFrame]) {
             if (!photoItemView) {
                 NSLog(@"Adding view at page %u", i);
@@ -336,7 +339,7 @@ bool hidden = YES;
             hidden = !_topBarView.alpha;
             [[UIApplication sharedApplication] setStatusBarHidden:!hidden withAnimation:UIStatusBarAnimationFade];
             [UIView animateWithDuration:.25f animations:^{
-                _topBarView.alpha = _bottomBarView.alpha = hidden?1:0;
+                _topBarView.alpha = _bottomBarView.alpha = _backgroundView.alpha = hidden?1:0;
             } completion:nil];
         }
             break;
@@ -429,8 +432,31 @@ bool hidden = YES;
     
     self.view = nil;
     
+    [self removeFromParentViewController];
+    
     [[UIApplication sharedApplication] setStatusBarStyle:_statusBarStyle animated:YES];
 }
+
+- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration{
+    CGFloat widthEachPage = [UIScreen mainScreen].bounds.size.width;
+    _scrollView.contentSize = CGSizeMake(widthEachPage * _photos.count, 0);
+    for (int i=0; i<_photos.count; i++) {
+        Photo *photo = _photos[i];
+        PhotoItemView *photoItemView = [_scrollView photoItemViewForPhoto:photo];
+        CGRect itemViewFrame = [_scrollView frameForPhotoItemViewAtPage:i];
+        if (photoItemView) {
+            [_scrollView setContentOffset:CGPointMake(_page * widthEachPage, 0) animated:NO];
+            photoItemView.frame = itemViewFrame;
+            [photoItemView.photoImageView calFrame];
+            photoItemView.photoImageView.frame = photoItemView.photoImageView.calF;
+        }
+    }
+
+}
+
+//- (BOOL)shouldAutorotate{
+//    return NO;
+//}
 /*
 #pragma mark - Navigation
 

@@ -25,7 +25,7 @@
     // Do any additional setup after loading the view.
     _imgArray = [NSMutableArray array];
     for (int i=1; i<5; i++) {
-        UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"%d", i]];
+        UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"%d.jpg", i]];
         [_imgArray addObject:image];
     }
     

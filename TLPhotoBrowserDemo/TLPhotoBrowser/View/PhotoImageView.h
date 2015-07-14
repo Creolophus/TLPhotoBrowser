@@ -12,4 +12,10 @@
 
 @property (nonatomic,assign) CGRect calF;
 
+/**
+ *  @author liang.tao, 15-07-14 10:07:51
+ *
+ *  @brief  旋转时候,需要重新计算一次Frame
+ */
+- (void)calFrame;
 @end

@@ -100,19 +100,19 @@
 
 - (CGRect)screenBounds{
     
-    if(CGRectEqualToRect(_screenBounds, CGRectZero)){
-        
-        _screenBounds = [UIScreen mainScreen].bounds;
-    }
+//    if(CGRectEqualToRect(_screenBounds, CGRectZero)){
+    
+    _screenBounds = [UIScreen mainScreen].bounds;
+//    }
     
     return _screenBounds;
 }
 
 - (CGPoint)screenCenter{
-    if(CGPointEqualToPoint(_screenCenter, CGPointZero)){
+//    if(CGPointEqualToPoint(_screenCenter, CGPointZero)){
         CGSize size = self.screenBounds.size;
         _screenCenter = CGPointMake(size.width * .5f, (size.height - 0) * .5f);
-    }
+//    }
     
     return _screenCenter;
 }
