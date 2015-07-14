@@ -24,6 +24,7 @@
 @property (weak, nonatomic) IBOutlet UIView *bottomBarView;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *descLabel;
+@property (weak, nonatomic) IBOutlet UIButton *collectBtn;
 
 /* presenting view controller */
 @property (weak, nonatomic) UIViewController *handleVC;
@@ -61,7 +62,7 @@
 
 + (void)show:(UIViewController *)handleVC type:(PhotoBrowserVCType)type contentType:(BrowserContentType)contentType index:(NSUInteger)index photoModelBlock:(NSArray *(^)())photoModelBlock{
     NSArray *photos = photoModelBlock();
-    
+
     if (photos.count == 0) {
         return;
     }
@@ -194,11 +195,17 @@
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    if (_handleVC.navigationController && _handleVC.navigationController.navigationBar.hidden) {
+        return;
+    }
     self.navigationController.navigationBar.hidden = YES;
 }
 
 - (void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
+    if (_handleVC.navigationController && _handleVC.navigationController.navigationBar.hidden) {
+        return;
+    }
     self.navigationController.navigationBar.hidden = NO;
 }
 
@@ -448,8 +455,22 @@ bool hidden = YES;
     }];
 }
 
+- (IBAction)commentBtnClicked:(id)sender {
+    
+}
 
+- (IBAction)collectBtnClicked:(id)sender {
+    UIButton *collectBtn = sender;
+//    collectBtn.selected = !collectBtn.selected;
 
+    [UIView transitionWithView:_collectBtn duration:0.5 options:(_collectBtn.selected?UIViewAnimationOptionTransitionCrossDissolve:UIViewAnimationOptionTransitionCurlDown) animations:^{
+        _collectBtn.selected = !collectBtn.selected;
+    } completion:nil];
+
+}
+
+- (IBAction)shareBtnClicked:(id)sender {
+}
 
 - (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration{
     CGFloat widthEachPage = [UIScreen mainScreen].bounds.size.width;

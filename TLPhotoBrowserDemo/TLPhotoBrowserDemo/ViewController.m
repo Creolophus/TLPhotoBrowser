@@ -90,7 +90,7 @@
 
 - (void)picCell:(PicCell *)cell clickedImageViews:(NSArray *)imageViews atIndex:(NSUInteger)index atIndexPath:(NSIndexPath *)indexPath{
     __weak ViewController *wkSelf = self;
-    [PhotoBrowserVC show:self type:PhotoBrowserVCTypePush contentType:BrowserContentTypePicNews index:index photoModelBlock:^NSArray *{
+    [PhotoBrowserVC show:self type:PhotoBrowserVCTypeZoom contentType:BrowserContentTypePicNews index:index photoModelBlock:^NSArray *{
         NSMutableArray *photos = [NSMutableArray arrayWithCapacity:[wkSelf.networkThumbnails[indexPath.row] count]];
         for (int i=0; i<[wkSelf.networkThumbnails[indexPath.row] count]; i++) {
             Photo *photo = [Photo new];

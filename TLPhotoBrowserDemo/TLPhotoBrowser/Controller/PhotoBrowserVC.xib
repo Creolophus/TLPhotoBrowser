@@ -10,6 +10,7 @@
                 <outlet property="backBtn" destination="7qV-Z3-kjU" id="WMb-P2-7vf"/>
                 <outlet property="backgroundView" destination="FYW-LC-48R" id="ZX7-sY-P3a"/>
                 <outlet property="bottomBarView" destination="5J6-m2-xTK" id="IxE-4Y-oMp"/>
+                <outlet property="collectBtn" destination="f7z-XA-OVt" id="Ga7-7R-cb2"/>
                 <outlet property="descLabel" destination="UGb-yx-bi3" id="vTK-n4-8Os"/>
                 <outlet property="scrollView" destination="qZQ-SG-gnW" id="iPX-T3-gsR"/>
                 <outlet property="titleLabel" destination="dUW-Ih-YfD" id="STm-Mj-XRP"/>
@@ -110,6 +111,9 @@
                                     <state key="normal" image="btn_share_normalwhite.png">
                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
+                                    <connections>
+                                        <action selector="shareBtnClicked:" destination="-1" eventType="touchUpInside" id="csE-sy-hb3"/>
+                                    </connections>
                                 </button>
                                 <view alpha="0.14999999999999969" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OjV-Q8-bDR" userLabel="Line">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="1"/>
@@ -128,6 +132,9 @@
                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
                                     <state key="selected" image="btn_star_press.png"/>
+                                    <connections>
+                                        <action selector="collectBtnClicked:" destination="-1" eventType="touchUpInside" id="xEV-K3-WgC"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v2F-Ji-rKO">
                                     <rect key="frame" x="457" y="6" width="25" height="25"/>
@@ -138,6 +145,9 @@
                                     <state key="normal" image="btn_commentwhite_normal.png">
                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
+                                    <connections>
+                                        <action selector="commentBtnClicked:" destination="-1" eventType="touchUpInside" id="iMj-yO-Yqo"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <constraints>
